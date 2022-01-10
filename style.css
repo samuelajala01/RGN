@@ -5,15 +5,15 @@
 }
 
 .container {
-  background-color:red;
   width: 520px;
+  border: 1px solid gray;
   min-height: 15em;
   margin: auto;
   margin-top: 4.5rem;
 }
 
 h1{
-  background-color: green;
+  background-color: blue;
   text-align: center;
   margin-top: 2rem;
   font-size:2.4rem;

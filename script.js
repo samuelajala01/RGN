@@ -1,16 +1,25 @@
-const min = document.querySelector('#min-value').value;
-const max = document.querySelector('#max-value').value;
-const btn = document.querySelector('#generate');
-const result = document.querySelector('.result');
 
 
-const randNum = Math.floor(Math.random() * (max - min + 1) + min )
+let btn = document.getElementById('generate');
+// let min = document.getElementById('min-value');
+let min = 3;
+// let max = document.getElementById('max-value');
+let max = 10;
+let clearbtn = document.getElementById('clear-btn');
+
+function getRandomNumber(a, b){
+  return Math.floor(Math.random() * (b - a + 1) + a );
+}
 
 
-btn.addEventListener('Click', (e) =>{
-  result.innerHTML = "hello there"
-  console.log('Logged')
+btn.onclick = () =>{
+  let min = document.getElementById('min-value').value;
+  let max = document.getElementById('max-value').value;
+
+  let result = getRandomNumber(min, max);
+  console.log(result);
+
   e.preventDefault();
-})
+}
 
 
