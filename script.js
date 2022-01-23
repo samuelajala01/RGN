@@ -1,10 +1,9 @@
 
 
 let btn = document.getElementById('generate');
-// let min = document.getElementById('min-value');
-let min = 3;
-// let max = document.getElementById('max-value');
-let max = 10;
+let min = document.getElementById('min-value');
+let max = document.getElementById('max-value');
+
 let clearbtn = document.getElementById('clear-btn');
 
 function getRandomNumber(a, b){
@@ -12,12 +11,17 @@ function getRandomNumber(a, b){
 }
 
 
-btn.onclick = () =>{
+btn.onclick = (e) =>{
   let min = document.getElementById('min-value').value;
   let max = document.getElementById('max-value').value;
+  let display = document.querySelector('.result')
 
   let result = getRandomNumber(min, max);
   console.log(result);
+  if(!result == 0){
+    display.innerHTML = `
+    <p>${result}</p>`
+  }
 
   e.preventDefault();
 }
